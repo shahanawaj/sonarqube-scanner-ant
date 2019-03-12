@@ -5,7 +5,7 @@
 	<property name="src.dir" value="src" />
 	<property name="build.dir" value="target" />
 	<property name="classes.dir" value="${build.dir}/classes" />
-	
+
 	<!-- Define the SonarQube global properties (the most usual way is to pass these properties via the command line) -->
 	<property name="sonar.host.url" value="http://localhost:9000" />
 
@@ -16,7 +16,7 @@
 	<property name="sonar.sources" value="src" />
 	<property name="sonar.binaries" value="target" />
 	<property name="sonar.sourceEncoding" value="UTF-8" />
-	
+
 	<!-- ========= Define "regular" targets: clean, compile, ... ========= -->
 	<target name="clean">
 		<delete dir="${build.dir}" />
@@ -33,13 +33,13 @@
 
 	<!-- ========= Define SonarQube Scanner for Ant Target ========= -->
 	<target name="sonar" depends="compile">
-		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+		      <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
 			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
-			<classpath path="path/to/sonar/ant/task/lib/sonarqube-ant-task-*.jar" />
-		</taskdef>
-		
+			             <classpath path="path/to/sonar/ant/task/lib/sonarqube-ant-task-*.jar" />
+		      </taskdef>
+
 		<!-- Execute SonarQube Scanner for Ant Analysis -->
-		<sonar:sonar />
+	      	<sonar:sonar />
 	</target>
 
 	<!-- ========= The main target "all" ========= -->
