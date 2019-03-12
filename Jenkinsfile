@@ -28,11 +28,4 @@ pipeline
 }*/
 }
 
-
-
-/* post{
-    always{
-      archiveArtifacts '**/dist/*.*'
-    }
-  }*/
 }
